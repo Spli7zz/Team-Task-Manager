@@ -252,11 +252,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         ?>
                         <tr>
 
-                            <td><?php echo $task_name ?></td>
-                            <td><?php echo $description ?></td>
-                            <td><?php echo $start_date ?></td>
-                            <td><?php echo $due_date ?></td>
-                            <td><?php echo $priority ?></td>
+                            <td><?php echo htmlspecialchars($task_name, ENT_QUOTES, 'UTF-8') ?></td>
+                            <td><?php echo htmlspecialchars($description, ENT_QUOTES, 'UTF-8') ?></td>
+                            <td><?php echo htmlspecialchars($start_date, ENT_QUOTES, 'UTF-8') ?></td>
+                            <td><?php echo htmlspecialchars($due_date, ENT_QUOTES, 'UTF-8') ?></td>
+                            <td><?php echo htmlspecialchars($priority, ENT_QUOTES, 'UTF-8') ?></td>
 
 
                             <td class="person-data">
