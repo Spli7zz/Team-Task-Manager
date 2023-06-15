@@ -144,11 +144,13 @@ if (isset($_POST['register'])) {
 
         <?php
         if (isset($_GET['error'])) {
-            echo '<div class="error">' . $_GET['error'] . '</div>';
+            $sanitizedInput = htmlspecialchars($_GET['error'], ENT_QUOTES, 'UTF-8');
+            echo '<div class="error">' . $sanitizedInput . '</div>';
         }
 
         if (isset($_GET['success'])) {
-            echo '<div class="success">' . $_GET['success'] . '</div>';
+            $sanitizedInput = htmlspecialchars($_GET['success'], ENT_QUOTES, 'UTF-8');
+            echo '<div class="success">' . $sanitizedInput . '</div>';
         }
 
         ?>
